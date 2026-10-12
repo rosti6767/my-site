@@ -1,126 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мир танцев</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-      color: #fff;
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    header h1 {
-      font-size: 42px;
-      background: linear-gradient(90deg, #e94560, #f9a826, #e94560);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 15px;
-    }
-
-    header p {
-      font-size: 18px;
-      color: #bbb;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      padding: 25px;
-      margin-bottom: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #e94560;
-    }
-
-    .card h2 {
-      color: #f9a826;
-      margin-bottom: 12px;
-      font-size: 24px;
-    }
-
-    .card p {
-      color: #ddd;
-      line-height: 1.7;
-      font-size: 16px;
-    }
-
-    .card ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    .card li {
-      color: #ddd;
-      line-height: 1.8;
-      font-size: 16px;
-    }
-
-    .emoji {
-      font-size: 30px;
-      margin-right: 10px;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 15px;
-      margin-top: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #888;
-      font-size: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background: linear-gradient(90deg, #e94560, #f9a826);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: transform 0.3s;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>💃 Мир танцев 🕺</h1>
-      <p>Всё о танцах: стили, история, польза</p>
-    </header>
+>
 
     <div class="card">
       <h2><span class="emoji">🎭</span>Что такое танец?</h2>
@@ -161,11 +39,7 @@
     <div class="card">
       <h2><span class="emoji">📜</span>Немного истории</h2>
       <p>
-        Первые танцы
-
-
-
-вились ещё в древности — люди танцевали у костра,
+        Первые танцы появились ещё в древности — люди танцевали у костра,
         чтобы отметить праздники или попросить у богов удачи. Со временем
         танец стал частью культуры разных народов. В Европе в средние века
         появились бальные танцы, а в XX веке — современные уличные стили.
@@ -187,8 +61,42 @@
     </div>
 
     <footer>
-      <p>© 2025 Мир танцев. Сделано с душой 💖</p>
+      <p> Мир танцев. +вайб 💖</p>
     </footer>
   </div>
+
+  <button id="topBtn" title="Наверх">↑</button>
+
+  <script>
+    // Анимация появления карточек при прокрутке
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    cards.forEach(card => observer.observe(card));
+
+    // Кнопка "Наверх"
+    const topBtn = document.getElementById('topBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        topBtn.classList.add('show');
+      } else {
+        topBtn.classList.remove('show');
+      }
+    });
+
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
-</html> поя
+</html>/header
