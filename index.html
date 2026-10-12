@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мир танцев</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      color: #fff;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      background: linear-gradient(90deg, #e94560, #f9a826, #e94560);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #bbb;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 25px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #e94560;
+    }
+
+    .card h2 {
+      color: #f9a826;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #ddd;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .card ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .card li {
+      color: #ddd;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .emoji {
+      font-size: 30px;
+      margin-right: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #888;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: linear-gradient(90deg, #e94560, #f9a826);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💃 Мир танцев 🕺</h1>
+      <p>Всё о танцах: стили, история, польза</p>
+    </header>
+
+    <div class="card">
+      <h2><span class="emoji">🎭</span>Что такое танец?</h2>
+      <p>
+        Танец — это искусство движения. С помощью танца люди выражают эмоции,
+        рассказывают истории и просто получают удовольствие. Танец существует
+        столько же, сколько существует человечество.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">🌟</span>Популярные стили танцев</h2>
+      <ul>
+        <li><strong>Балет</strong> — классика, грация и строгая техника</li>
+        <li><strong>Хип-хоп</strong> — уличный стиль, энергия и свобода</li>
+        <li><strong>Брейк-данс</strong> — акробатика и сила</li>
+        <li><strong>Сальса</strong> — страстный латиноамериканский танец</li>
+        <li><strong>Танго</strong> — чувственный и драматичный</li>
+        <li><strong>Вальс</strong> — плавный бальный танец</li>
+        <li><strong>Контемпорари</strong> — современный танец о чувствах</li>
+        <li><strong>Хип-хоп</strong> — молодёжный и ритмичный</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">💪</span>Чем полезны танцы?</h2>
+      <ul>
+        <li>Укрепляют мышцы и улучшают осанку</li>
+        <li>Развивают координацию и чувство ритма</li>
+        <li>Помогают снять стресс</li>
+        <li>Улучшают настроение</li>
+        <li>Развивают уверенность в себе</li>
+        <li>Это отличный способ познакомиться с людьми</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">📜</span>Немного истории</h2>
+      <p>
+        Первые танцы появились ещё в древности — люди танцевали у костра,
+        чтобы отметить праздники или попросить у богов удачи. Со временем
+        танец стал частью культуры разных народов. В Европе в средние века
+        появились бальные танцы, а в XX веке — современные уличные стили.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="emoji">🎯</span>С чего начать?</h2>
+      <p>
+        Если ты хочешь начать танцевать — не бойся! Найди студию рядом с домом,
+        выбери стиль, который тебе нравится, и приходи на пробное занятие.
+        Главное — желание и хорошее настроение!
+      </p>
+      <a href="https://www.youtube.com/results?search_query=уроки+танцев+для+начинающих" class="btn" target="_blank">Смотреть уроки на YouTube</a>
+    </div>
+
+    <footer>
+      <p>© 2025 Мир танцев. Сделано с душой 💖</p>
+    </footer>
+  </div>
+</body>
+</html>
